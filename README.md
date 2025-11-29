@@ -61,6 +61,23 @@ Admin bisa memeriksa data, mengubah status, mengatur tanggal magang, mengirim em
 
 ---
 
+## 📸 Screenshot / Demo
+
+### Dashboard Admin 
+![Landing Page](public/screenshots/dashboard-admin.png)
+
+### Dashboard Peserta
+![Dashboard Peserta](public/screenshots/dashboard-peserta.png)
+
+### Data Peserta Yang di Akses Admin 
+![Status Pendaftaran](public/screenshots/data-peserta-admin.png)
+
+
+
+### Status Pendaftaran Peserta 
+![Detail Pendaftar](public/screenshots/pendaftaran-magang.png)
+
+
 ## 💻 Requirements
 
 Sebelum menjalankan project ini di laptop lain, pastikan sudah ter-install:
