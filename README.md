@@ -90,43 +90,81 @@ Sebelum menjalankan project ini di laptop lain, pastikan sudah ter-install:
 
 ---
 
-## 🚀 Cara Menjalankan
+Sip, kita rapikan jadi enak dibaca dan gampang di-copy ke README.
+Silakan ganti bagian “Cara Menjalankan” di README dengan ini:
 
-Langkah berikut diasumsikan dijalankan di Windows (XAMPP), tapi di OS lain konsepnya sama.
+````markdown
+## 🚀 Cara Menjalankan Aplikasi
+
+Langkah berikut diasumsikan dijalankan di **Windows + XAMPP**, tapi di OS lain konsepnya sama.
+
+---
 
 ### 1. Clone Repository
+
+```bash
 git clone https://github.com/suhastral3/Website-Pendaftaran-Magang.git
 cd Website-Pendaftaran-Magang
+````
 
-2. Install Dependency PHP & JS
+---
+
+### 2. Install Dependency PHP & JS
+
+```bash
 composer install
 npm install
+```
 
-Kalau pakai npm versi baru, boleh juga:
+Jika pakai npm versi baru dan ada masalah dependency, bisa pakai:
+
+```bash
 npm install --legacy-peer-deps
+```
 
-4. Buat File .env
-Salin dari example:
+---
+
+### 3. Buat & Konfigurasi File `.env`
+
+Buat file `.env` dari contoh:
+
+```bash
 cp .env.example .env
+```
 
-Lalu edit .env dan sesuaikan:
+Lalu buka file `.env` dan minimal sesuaikan:
+
+```env
 APP_NAME="Sistem Pendaftaran Magang"
 APP_ENV=local
 APP_DEBUG=true
-APP_URL=http://localhost:8000   # atau http://127.0.0.1:8000
+APP_URL=http://127.0.0.1:8000
+```
 
-# Koneksi database (sesuaikan dengan XAMPP / MySQL di laptop)
+#### Koneksi database (sesuaikan dengan XAMPP/MySQL)
+
+```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=magang_dpppa      # buat database ini dulu di phpMyAdmin
-DB_USERNAME=root             # default XAMPP
-DB_PASSWORD=                 # biasanya kosong di XAMPP
+DB_DATABASE=magang_dpppa   # buat dulu database ini di phpMyAdmin
+DB_USERNAME=root           # default XAMPP
+DB_PASSWORD=               # biasanya kosong di XAMPP
+```
 
-4. Konfigurasi Mailtrap (Opsional tapi disarankan)
-Aplikasi ini menggunakan Mailtrap untuk testing email (tidak mengirim ke email sungguhan).
-Di Mailtrap, buat Inbox baru, lalu ambil konfigurasi SMTP dan masukkan ke .env:
+---
 
+### 4. Konfigurasi Mailtrap (Opsional tapi Disarankan)
+
+Aplikasi ini menggunakan **Mailtrap** untuk testing email
+(jadi tidak mengirim ke email sungguhan).
+
+Di Mailtrap:
+
+1. Buat Inbox baru.
+2. Ambil konfigurasi SMTP lalu masukkan ke `.env`:
+
+```env
 MAIL_MAILER=smtp
 MAIL_HOST=sandbox.smtp.mailtrap.io
 MAIL_PORT=2525
@@ -135,47 +173,80 @@ MAIL_PASSWORD=xxxxxxxxxxxxxx
 MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS="no-reply@magang.test"
 MAIL_FROM_NAME="Sistem Pendaftaran Magang"
+```
 
-Kalau dibiarkan default Mailtrap, email tidak akan masuk ke Gmail peserta, tapi akan muncul di dashboard Mailtrap.
-Untuk produksi, ganti konfigurasi SMTP dengan server email sungguhan (misal Gmail SMTP, layanan email perusahaan, dll.)
+* Jika dibiarkan seperti ini, email **tidak masuk ke Gmail peserta**,
+  tapi muncul di dashboard Mailtrap.
+* Untuk produksi, ganti dengan konfigurasi SMTP yang sungguhan
+  (Gmail SMTP, email kampus/perusahaan, dsb).
 
-5. Generate App Key
+---
+
+### 5. Generate APP_KEY
+
+```bash
 php artisan key:generate
+```
 
-6. Migrasi Database & Seeder Admin
-Jalankan:
+---
+
+### 6. Migrasi Database & Seeder Admin
+
+```bash
 php artisan migrate --seed
+```
 
 Perintah ini akan:
-Membuat semua tabel yang dibutuhkan.
-Membuat akun admin default dari AdminUserSeeder.
 
-Akun Admin Default:
-Email: admin@magang.test
-Password: password123
+* Membuat semua tabel yang dibutuhkan.
+* Menjalankan `AdminUserSeeder` untuk membuat akun admin default.
 
-Silakan ubah password ini dari halaman admin setelah login.
+**Akun admin default:**
 
-7. Buat Storage Link (untuk file upload)
+* Email   : `admin@magang.test`
+* Password: `password123`
+
+Silakan ubah password ini setelah login di halaman admin.
+
+---
+
+### 7. Buat Storage Link (untuk File Upload)
+
+```bash
 php artisan storage:link
-Ini supaya file yang di-upload (CV, surat pengantar, KTP, KTM) bisa diakses via public/storage.
+```
 
-8. Jalankan Server & Build Asset
+Supaya file yang di-upload (CV, surat pengantar, KTP, KTM) dapat diakses lewat `public/storage`.
+
+---
+
+### 8. Jalankan Server & Build Asset
+
 Jalankan backend Laravel:
+
+```bash
 php artisan serve
+```
 
-Jalankan frontend (Tailwind + JS) – pilih salah satu:
+Jalankan frontend (Tailwind + JS), pilih salah satu:
 
-Untuk development (live reload):
+* Untuk development (live reload):
 
-npm run dev
+  ```bash
+  npm run dev
+  ```
 
+* Untuk build produksi:
 
-Untuk build produksi:
+  ```bash
+  npm run build
+  ```
 
-npm run build
+Setelah itu, buka aplikasi di browser:
 
-
-Kalau sudah, buka di browser:
-
+```text
 http://127.0.0.1:8000
+```
+
+
+
