@@ -193,7 +193,7 @@ Perintah ini akan:
 
 ```
 📧 Email: admin@magang.test
-🔑 Password: password123
+🔑 Password: admin12345
 ```
 
 > ⚠️ **Penting:** Segera ubah password setelah login di halaman admin!
