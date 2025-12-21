@@ -37,28 +37,6 @@ Sistem ini memudahkan proses pendaftaran magang secara **online dan paperless**.
 
 ---
 
-## 📸 Screenshot / Demo
-
-### Dashboard Admin
-
-![Landing Page](public/screenshots/dashboard-admin.png)
-
-### Dashboard Peserta
-
-![Dashboard Peserta](public/screenshots/dashboard-peserta.png)
-
-### Data Peserta Yang di Akses Admin
-
-![Status Pendaftaran](public/screenshots/data-peserta-admin.png)
-
-### Status Pendaftaran Peserta
-
-![Detail Pendaftar](public/screenshots/pendaftaran-magang.png)
-
-## 💻 Requirements
-
-=======
-
 ## 🛠️ Teknologi
 
 | Teknologi     | Versi    | Fungsi               |
@@ -72,21 +50,6 @@ Sistem ini memudahkan proses pendaftaran magang secara **online dan paperless**.
 | DomPDF        | -        | PDF Generator        |
 
 ---
-
-<<<<<<< HEAD
-Sip, kita rapikan jadi enak dibaca dan gampang di-copy ke README.
-Silakan ganti bagian “Cara Menjalankan” di README dengan ini:
-
-````markdown
-## 🚀 Cara Menjalankan Aplikasi
-
-Langkah berikut diasumsikan dijalankan di **Windows + XAMPP**, tapi di OS lain konsepnya sama.
-
----
-
-### 1. Clone Repository
-
-=======
 
 ## 📸 Screenshot
 
@@ -128,32 +91,19 @@ Langkah berikut diasumsikan dijalankan di **Windows + XAMPP**, tapi di OS lain k
 
 ### 1️⃣ Clone Repository
 
-> > > > > > > 2433952 (Update README)
-
 ```bash
 git clone https://github.com/suhastral3/Website-Pendaftaran-Magang.git
 cd Website-Pendaftaran-Magang
-<<<<<<< HEAD
 ```
-````
-
----
-
-### 2. Install Dependency PHP & JS
-
-=======
-
-````
 
 ---
 
 ### 2️⃣ Install Dependency PHP & JS
->>>>>>> 2433952 (Update README)
 
 ```bash
 composer install
 npm install
-````
+```
 
 Jika pakai npm versi baru dan ada masalah dependency, bisa pakai:
 
@@ -163,15 +113,7 @@ npm install --legacy-peer-deps
 
 ---
 
-<<<<<<< HEAD
-
-### 3. Buat & Konfigurasi File `.env`
-
-=======
-
 ### 3️⃣ Buat & Konfigurasi File `.env`
-
-> > > > > > > 2433952 (Update README)
 
 Buat file `.env` dari contoh:
 
@@ -188,15 +130,7 @@ APP_DEBUG=true
 APP_URL=http://127.0.0.1:8000
 ```
 
-<<<<<<< HEAD
-
-#### Koneksi database (sesuaikan dengan XAMPP/MySQL)
-
-=======
-
 #### Koneksi Database (sesuaikan dengan XAMPP/MySQL)
-
-> > > > > > > 2433952 (Update README)
 
 ```env
 DB_CONNECTION=mysql
@@ -209,17 +143,6 @@ DB_PASSWORD=               # biasanya kosong di XAMPP
 
 ---
 
-<<<<<<< HEAD
-
-### 4. Konfigurasi Mailtrap (Opsional tapi Disarankan)
-
-Aplikasi ini menggunakan **Mailtrap** untuk testing email
-(jadi tidak mengirim ke email sungguhan).
-
-Di Mailtrap:
-
-1. # Buat Inbox baru.
-
 ### 4️⃣ Konfigurasi Mailtrap (Opsional tapi Disarankan)
 
 Aplikasi ini menggunakan **Mailtrap** untuk testing email (jadi tidak mengirim ke email sungguhan).
@@ -227,7 +150,6 @@ Aplikasi ini menggunakan **Mailtrap** untuk testing email (jadi tidak mengirim k
 **Di Mailtrap:**
 
 1. Buat Inbox baru
-    > > > > > > > 2433952 (Update README)
 2. Ambil konfigurasi SMTP lalu masukkan ke `.env`:
 
 ```env
@@ -241,19 +163,6 @@ MAIL_FROM_ADDRESS="no-reply@magang.test"
 MAIL_FROM_NAME="Sistem Pendaftaran Magang"
 ```
 
-<<<<<<< HEAD
-
--   Jika dibiarkan seperti ini, email **tidak masuk ke Gmail peserta**,
-    tapi muncul di dashboard Mailtrap.
--   Untuk produksi, ganti dengan konfigurasi SMTP yang sungguhan
-    (Gmail SMTP, email kampus/perusahaan, dsb).
-
----
-
-### 5. Generate APP_KEY
-
-=======
-
 > 📧 **Catatan Email:**
 >
 > -   Jika dibiarkan seperti ini, email **tidak masuk ke Gmail peserta**, tapi muncul di dashboard Mailtrap
@@ -263,47 +172,19 @@ MAIL_FROM_NAME="Sistem Pendaftaran Magang"
 
 ### 5️⃣ Generate APP_KEY
 
-> > > > > > > 2433952 (Update README)
-
 ```bash
 php artisan key:generate
 ```
 
 ---
 
-<<<<<<< HEAD
-
-### 6. Migrasi Database & Seeder Admin
-
-=======
-
 ### 6️⃣ Migrasi Database & Seeder Admin
-
-> > > > > > > 2433952 (Update README)
 
 ```bash
 php artisan migrate --seed
 ```
 
 Perintah ini akan:
-
-<<<<<<< HEAD
-
--   Membuat semua tabel yang dibutuhkan.
--   Menjalankan `AdminUserSeeder` untuk membuat akun admin default.
-
-**Akun admin default:**
-
--   Email : `admin@magang.test`
--   Password: `password123`
-
-Silakan ubah password ini setelah login di halaman admin.
-
----
-
-### 7. Buat Storage Link (untuk File Upload)
-
-=======
 
 -   Membuat semua tabel yang dibutuhkan
 -   Menjalankan `AdminUserSeeder` untuk membuat akun admin default
@@ -321,21 +202,9 @@ Silakan ubah password ini setelah login di halaman admin.
 
 ### 7️⃣ Buat Storage Link (untuk File Upload)
 
-> > > > > > > 2433952 (Update README)
-
 ```bash
 php artisan storage:link
 ```
-
-<<<<<<< HEAD
-
-Supaya file yang di-upload (CV, surat pengantar, KTP, KTM) dapat diakses lewat `public/storage`.
-
----
-
-### 8. Jalankan Server & Build Asset
-
-# Jalankan backend Laravel:
 
 Supaya file yang di-upload (CV, surat pengantar, KTP, KTM) dapat diakses lewat `public/storage`.
 
@@ -345,47 +214,19 @@ Supaya file yang di-upload (CV, surat pengantar, KTP, KTM) dapat diakses lewat `
 
 **Jalankan backend Laravel:**
 
-> > > > > > > 2433952 (Update README)
-
 ```bash
 php artisan serve
 ```
 
-<<<<<<< HEAD
-Jalankan frontend (Tailwind + JS), pilih salah satu:
-=======
 **Jalankan frontend (Tailwind + JS), pilih salah satu:**
 
-> > > > > > > 2433952 (Update README)
-
--   Untuk development (live reload):
-
-<<<<<<< HEAD
+Untuk development (live reload):
 
 ```bash
 npm run dev
 ```
 
--   # Untuk build produksi:
-
-```bash
-npm run dev
-```
-
-> > > > > > > 2433952 (Update README)
-
-```bash
-npm run build
-```
-
-<<<<<<< HEAD
-Setelah itu, buka aplikasi di browser:
-
-```text
-http://127.0.0.1:8000
-```
-
-=======
+Untuk build produksi:
 
 ```bash
 npm run build
@@ -463,10 +304,8 @@ Dikembangkan dengan ❤️ untuk DP3A Provinsi Sumatera Selatan
 
 Jika mengalami kendala atau ingin bertanya:
 
--   📧 Email: [indrajayabta414@gmail.com]
+-   📧 Email: [Kontak Anda]
 
 ---
 
 ⭐ **Jika project ini bermanfaat, jangan lupa beri bintang!** ⭐
-
-> > > > > > > 2433952 (Update README)
