@@ -296,7 +296,7 @@ Project ini bersifat open source untuk keperluan edukasi dan pengembangan.
 
 ## 👨‍💻 Developer
 
-Dikembangkan dengan ❤️ untuk DP3A Provinsi Sumatera Selatan
+Dikembangkan Oleh : https://github.com/suhastra13
 
 ---
 
