@@ -304,7 +304,7 @@ Dikembangkan dengan ❤️ untuk DP3A Provinsi Sumatera Selatan
 
 Jika mengalami kendala atau ingin bertanya:
 
--   📧 Email: [Kontak Anda]
+-   📧 Email: indrajayabta414@gmail.com
 
 ---
 
