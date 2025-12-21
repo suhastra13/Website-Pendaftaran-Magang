@@ -1,95 +1,79 @@
-# Website Pendaftaran Magang – DP3A Provinsi Sumatera Selatan
+# 🎓 Sistem Pendaftaran Magang DP3A Sumsel
 
-Aplikasi web berbasis Laravel untuk pendaftaran magang secara online di
-**Dinas Pemberdayaan Perempuan dan Perlindungan Anak (DP3A) Provinsi Sumsel**.
-
-Peserta bisa daftar, upload dokumen, dan memantau status pengajuan.  
-Admin bisa memeriksa data, mengubah status, mengatur tanggal magang, mengirim email notifikasi, dan ekspor CSV.
+> Aplikasi web modern berbasis Laravel untuk mengelola pendaftaran magang di **Dinas Pemberdayaan Perempuan dan Perlindungan Anak (DP3A) Provinsi Sumatera Selatan**
 
 ---
 
-## ✨ Fitur Utama
+## 📋 Deskripsi
 
-### Untuk Peserta
-
-- Registrasi akun peserta + login.
-- Form **pendaftaran magang**:
-  - Data diri (nama, email, no HP, NIM, universitas, prodi, semester, alamat).
-  - Judul/fokus magang dan deskripsi singkat/motivasi.
-  - Upload dokumen:
-    - CV (wajib)
-    - Surat pengantar kampus (wajib)
-    - KTM (opsional)
-    - KTP (opsional)
-- Halaman **Dashboard Peserta**:
-  - Ringkasan status pengajuan (Pending / Diterima / Ditolak).
-  - Catatan dari admin.
-  - Informasi tanggal mulai & selesai (jika sudah diterima).
-- Halaman **Status Pendaftaran Detail**:
-  - Data lengkap pendaftar.
-  - Daftar dokumen yang di-upload.
-- Download **Surat Penerimaan Magang (PDF)** kalau status sudah `diterima`.
-
-### Untuk Admin
-
-- Dashboard Admin:
-  - Total pendaftar, jumlah pending / diterima / ditolak.
-  - Tabel pendaftar terbaru.
-- Halaman **Daftar Pendaftar**:
-  - Filter berdasarkan status (Semua, Pending, Diterima, Ditolak).
-  - Pencarian (nama, email, universitas, prodi).
-  - Tombol “Detail” untuk tiap pendaftar.
-  - Tombol **Export CSV** (seluruh data pendaftar).
-- Halaman **Detail Pendaftar**:
-  - Data lengkap peserta.
-  - Dokumen pendukung (CV, surat pengantar, KTM, KTP) dengan desain kartu.
-  - Form update status + catatan admin.
-  - Input **tanggal mulai** dan **tanggal selesai** magang (wajib diisi kalau status `diterima`).
-  - Saat status diubah, sistem mengirim **email notifikasi** ke peserta.
+Sistem ini memudahkan proses pendaftaran magang secara **online dan paperless**. Peserta dapat mendaftar, mengunggah dokumen, dan memantau status pengajuan secara real-time. Admin dapat mengelola data pendaftar, mengubah status, mengirim notifikasi email, dan mengekspor data ke CSV.
 
 ---
 
-## 🧱 Teknologi yang Digunakan
+## ✨ Fitur Unggulan
 
-- **Laravel** (versi 10/11/12 – sesuai composer di project ini)
-- **PHP** 8.1/8.2
-- **MySQL / MariaDB**
-- **Tailwind CSS** (via Laravel Breeze / Vite)
-- **Mailtrap** untuk testing email (sandbox)
-- **barryvdh/laravel-dompdf** untuk generate PDF surat penerimaan
-- GitHub sebagai repositori kode
+### 👨‍🎓 **Panel Peserta**
+
+-   ✅ Registrasi dan login yang aman
+-   📝 Form pendaftaran lengkap dengan:
+    -   Data pribadi (nama, email, no HP, NIM, universitas, prodi, semester, alamat)
+    -   Informasi magang (judul, fokus, motivasi)
+    -   Upload dokumen (CV, surat pengantar, KTM, KTP)
+-   📊 Dashboard interaktif untuk monitoring status
+-   🔔 Notifikasi email otomatis untuk update status
+-   📄 Download surat penerimaan magang (PDF) untuk pendaftar yang diterima
+
+### 👔 **Panel Admin**
+
+-   📈 Dashboard dengan statistik lengkap (total pendaftar, status pending/diterima/ditolak)
+-   🔍 Pencarian dan filter data pendaftar
+-   📋 Manajemen pendaftar:
+    -   Lihat detail lengkap peserta dan dokumen
+    -   Update status pengajuan dengan catatan
+    -   Atur tanggal mulai dan selesai magang
+-   📧 Pengiriman email notifikasi otomatis
+-   📤 Export data pendaftar ke format CSV
+-   🖼️ Preview dokumen dalam format kartu yang rapi
 
 ---
 
 ## 📸 Screenshot / Demo
 
-### Dashboard Admin 
+### Dashboard Admin
+
 ![Landing Page](public/screenshots/dashboard-admin.png)
 
 ### Dashboard Peserta
+
 ![Dashboard Peserta](public/screenshots/dashboard-peserta.png)
 
-### Data Peserta Yang di Akses Admin 
+### Data Peserta Yang di Akses Admin
+
 ![Status Pendaftaran](public/screenshots/data-peserta-admin.png)
 
+### Status Pendaftaran Peserta
 
-
-### Status Pendaftaran Peserta 
 ![Detail Pendaftar](public/screenshots/pendaftaran-magang.png)
-
 
 ## 💻 Requirements
 
-Sebelum menjalankan project ini di laptop lain, pastikan sudah ter-install:
+=======
 
-- PHP ≥ 8.1  
-- Composer  
-- MySQL / MariaDB (bisa lewat XAMPP/Laragon, dll.)  
-- Node.js + NPM  
-- Git (opsional tapi disarankan)
+## 🛠️ Teknologi
+
+| Teknologi     | Versi    | Fungsi               |
+| ------------- | -------- | -------------------- |
+| Laravel       | 10/11/12 | Backend Framework    |
+| PHP           | ≥ 8.1    | Server-side Language |
+| MySQL/MariaDB | -        | Database             |
+| Tailwind CSS  | -        | UI Framework         |
+| Vite          | -        | Asset Bundler        |
+| Mailtrap      | -        | Email Testing        |
+| DomPDF        | -        | PDF Generator        |
 
 ---
 
+<<<<<<< HEAD
 Sip, kita rapikan jadi enak dibaca dan gampang di-copy ke README.
 Silakan ganti bagian “Cara Menjalankan” di README dengan ini:
 
@@ -102,19 +86,74 @@ Langkah berikut diasumsikan dijalankan di **Windows + XAMPP**, tapi di OS lain k
 
 ### 1. Clone Repository
 
+=======
+
+## 📸 Screenshot
+
+### Dashboard Admin
+
+![Dashboard Admin](public/screenshots/dashboard-admin.png)
+
+### Dashboard Peserta
+
+![Dashboard Peserta](public/screenshots/dashboard-peserta.png)
+
+### Data Peserta Yang Diakses Admin
+
+![Data Peserta Admin](public/screenshots/data-peserta-admin.png)
+
+### Status Pendaftaran Peserta
+
+![Pendaftaran Magang](public/screenshots/pendaftaran-magang.png)
+
+---
+
+## 📦 Prasyarat
+
+Pastikan sistem Anda sudah terinstall:
+
+-   ✔️ PHP 8.1 atau lebih baru
+-   ✔️ Composer
+-   ✔️ MySQL atau MariaDB
+-   ✔️ Node.js & NPM
+-   ✔️ Git (opsional)
+
+---
+
+## 🚀 Cara Menjalankan Aplikasi
+
+Langkah berikut diasumsikan dijalankan di **Windows + XAMPP**, tapi di OS lain konsepnya sama.
+
+---
+
+### 1️⃣ Clone Repository
+
+> > > > > > > 2433952 (Update README)
+
 ```bash
 git clone https://github.com/suhastral3/Website-Pendaftaran-Magang.git
 cd Website-Pendaftaran-Magang
+<<<<<<< HEAD
+```
 ````
 
 ---
 
 ### 2. Install Dependency PHP & JS
 
+=======
+
+````
+
+---
+
+### 2️⃣ Install Dependency PHP & JS
+>>>>>>> 2433952 (Update README)
+
 ```bash
 composer install
 npm install
-```
+````
 
 Jika pakai npm versi baru dan ada masalah dependency, bisa pakai:
 
@@ -124,7 +163,15 @@ npm install --legacy-peer-deps
 
 ---
 
+<<<<<<< HEAD
+
 ### 3. Buat & Konfigurasi File `.env`
+
+=======
+
+### 3️⃣ Buat & Konfigurasi File `.env`
+
+> > > > > > > 2433952 (Update README)
 
 Buat file `.env` dari contoh:
 
@@ -141,7 +188,15 @@ APP_DEBUG=true
 APP_URL=http://127.0.0.1:8000
 ```
 
+<<<<<<< HEAD
+
 #### Koneksi database (sesuaikan dengan XAMPP/MySQL)
+
+=======
+
+#### Koneksi Database (sesuaikan dengan XAMPP/MySQL)
+
+> > > > > > > 2433952 (Update README)
 
 ```env
 DB_CONNECTION=mysql
@@ -154,6 +209,8 @@ DB_PASSWORD=               # biasanya kosong di XAMPP
 
 ---
 
+<<<<<<< HEAD
+
 ### 4. Konfigurasi Mailtrap (Opsional tapi Disarankan)
 
 Aplikasi ini menggunakan **Mailtrap** untuk testing email
@@ -161,7 +218,16 @@ Aplikasi ini menggunakan **Mailtrap** untuk testing email
 
 Di Mailtrap:
 
-1. Buat Inbox baru.
+1. # Buat Inbox baru.
+
+### 4️⃣ Konfigurasi Mailtrap (Opsional tapi Disarankan)
+
+Aplikasi ini menggunakan **Mailtrap** untuk testing email (jadi tidak mengirim ke email sungguhan).
+
+**Di Mailtrap:**
+
+1. Buat Inbox baru
+    > > > > > > > 2433952 (Update README)
 2. Ambil konfigurasi SMTP lalu masukkan ke `.env`:
 
 ```env
@@ -175,14 +241,29 @@ MAIL_FROM_ADDRESS="no-reply@magang.test"
 MAIL_FROM_NAME="Sistem Pendaftaran Magang"
 ```
 
-* Jika dibiarkan seperti ini, email **tidak masuk ke Gmail peserta**,
-  tapi muncul di dashboard Mailtrap.
-* Untuk produksi, ganti dengan konfigurasi SMTP yang sungguhan
-  (Gmail SMTP, email kampus/perusahaan, dsb).
+<<<<<<< HEAD
+
+-   Jika dibiarkan seperti ini, email **tidak masuk ke Gmail peserta**,
+    tapi muncul di dashboard Mailtrap.
+-   Untuk produksi, ganti dengan konfigurasi SMTP yang sungguhan
+    (Gmail SMTP, email kampus/perusahaan, dsb).
 
 ---
 
 ### 5. Generate APP_KEY
+
+=======
+
+> 📧 **Catatan Email:**
+>
+> -   Jika dibiarkan seperti ini, email **tidak masuk ke Gmail peserta**, tapi muncul di dashboard Mailtrap
+> -   Untuk produksi, ganti dengan konfigurasi SMTP yang sungguhan (Gmail SMTP, email kampus/perusahaan, dsb)
+
+---
+
+### 5️⃣ Generate APP_KEY
+
+> > > > > > > 2433952 (Update README)
 
 ```bash
 php artisan key:generate
@@ -190,7 +271,15 @@ php artisan key:generate
 
 ---
 
+<<<<<<< HEAD
+
 ### 6. Migrasi Database & Seeder Admin
+
+=======
+
+### 6️⃣ Migrasi Database & Seeder Admin
+
+> > > > > > > 2433952 (Update README)
 
 ```bash
 php artisan migrate --seed
@@ -198,13 +287,15 @@ php artisan migrate --seed
 
 Perintah ini akan:
 
-* Membuat semua tabel yang dibutuhkan.
-* Menjalankan `AdminUserSeeder` untuk membuat akun admin default.
+<<<<<<< HEAD
+
+-   Membuat semua tabel yang dibutuhkan.
+-   Menjalankan `AdminUserSeeder` untuk membuat akun admin default.
 
 **Akun admin default:**
 
-* Email   : `admin@magang.test`
-* Password: `password123`
+-   Email : `admin@magang.test`
+-   Password: `password123`
 
 Silakan ubah password ini setelah login di halaman admin.
 
@@ -212,9 +303,31 @@ Silakan ubah password ini setelah login di halaman admin.
 
 ### 7. Buat Storage Link (untuk File Upload)
 
+=======
+
+-   Membuat semua tabel yang dibutuhkan
+-   Menjalankan `AdminUserSeeder` untuk membuat akun admin default
+
+**Akun admin default:**
+
+```
+📧 Email: admin@magang.test
+🔑 Password: password123
+```
+
+> ⚠️ **Penting:** Segera ubah password setelah login di halaman admin!
+
+---
+
+### 7️⃣ Buat Storage Link (untuk File Upload)
+
+> > > > > > > 2433952 (Update README)
+
 ```bash
 php artisan storage:link
 ```
+
+<<<<<<< HEAD
 
 Supaya file yang di-upload (CV, surat pengantar, KTP, KTM) dapat diakses lewat `public/storage`.
 
@@ -222,31 +335,138 @@ Supaya file yang di-upload (CV, surat pengantar, KTP, KTM) dapat diakses lewat `
 
 ### 8. Jalankan Server & Build Asset
 
-Jalankan backend Laravel:
+# Jalankan backend Laravel:
+
+Supaya file yang di-upload (CV, surat pengantar, KTP, KTM) dapat diakses lewat `public/storage`.
+
+---
+
+### 8️⃣ Jalankan Server & Build Asset
+
+**Jalankan backend Laravel:**
+
+> > > > > > > 2433952 (Update README)
 
 ```bash
 php artisan serve
 ```
 
+<<<<<<< HEAD
 Jalankan frontend (Tailwind + JS), pilih salah satu:
+=======
+**Jalankan frontend (Tailwind + JS), pilih salah satu:**
 
-* Untuk development (live reload):
+> > > > > > > 2433952 (Update README)
 
-  ```bash
-  npm run dev
-  ```
+-   Untuk development (live reload):
 
-* Untuk build produksi:
+<<<<<<< HEAD
 
-  ```bash
-  npm run build
-  ```
+```bash
+npm run dev
+```
 
+-   # Untuk build produksi:
+
+```bash
+npm run dev
+```
+
+> > > > > > > 2433952 (Update README)
+
+```bash
+npm run build
+```
+
+<<<<<<< HEAD
 Setelah itu, buka aplikasi di browser:
 
 ```text
 http://127.0.0.1:8000
 ```
 
+=======
 
+```bash
+npm run build
+```
 
+Setelah itu, buka aplikasi di browser:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+## 📂 Struktur Project
+
+```
+Website-Pendaftaran-Magang/
+├── app/
+│   ├── Http/Controllers/      # Controllers
+│   ├── Models/                # Eloquent Models
+│   └── Mail/                  # Email Templates
+├── database/
+│   ├── migrations/            # Database Migrations
+│   └── seeders/               # Database Seeders
+├── resources/
+│   ├── views/                 # Blade Templates
+│   └── js/                    # JavaScript Files
+├── public/
+│   ├── screenshots/           # Screenshot Aplikasi
+│   └── storage/               # Public Storage (symlink)
+├── routes/
+│   └── web.php                # Web Routes
+└── storage/
+    └── app/public/            # File Uploads
+```
+
+---
+
+## 🔐 Kredensial Default
+
+### Admin
+
+-   **Email:** `admin@magang.test`
+-   **Password:** `admin12345`
+
+> ⚠️ Ubah kredensial ini setelah instalasi pertama untuk keamanan!
+
+---
+
+## 🤝 Kontribusi
+
+Kontribusi sangat diterima! Silakan:
+
+1. Fork repository ini
+2. Buat branch fitur baru (`git checkout -b fitur-baru`)
+3. Commit perubahan (`git commit -m 'Menambah fitur baru'`)
+4. Push ke branch (`git push origin fitur-baru`)
+5. Buat Pull Request
+
+---
+
+## 📝 Lisensi
+
+Project ini bersifat open source untuk keperluan edukasi dan pengembangan.
+
+---
+
+## 👨‍💻 Developer
+
+Dikembangkan dengan ❤️ untuk DP3A Provinsi Sumatera Selatan
+
+---
+
+## 📞 Kontak & Support
+
+Jika mengalami kendala atau ingin bertanya:
+
+-   📧 Email: [indrajayabta414@gmail.com]
+
+---
+
+⭐ **Jika project ini bermanfaat, jangan lupa beri bintang!** ⭐
+
+> > > > > > > 2433952 (Update README)
